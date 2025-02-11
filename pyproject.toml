@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "nobound-yolo"
+version = "0.1.0"
+description = "Решение проблемы краевых объектов на примере модели YOLOv8. Бакалаврская дипломная работа Кондрашова Кирилла."
+authors = ["KirillPal <kirpall@ya.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ultralytics = "8.3.48"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
