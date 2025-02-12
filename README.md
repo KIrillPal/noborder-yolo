@@ -6,8 +6,8 @@
 
 ---
 
-- [ ] Статья: TODO
-- [ ] Статус литобзора: TODO
+- [x] Статья: [View-only link](https://latex.se-vi-science.ru/read/rjkxjpsqkvxs#46dd79)
+- [x] Статус диплома: [Confluence link](https://confluence.color.iitp.ru/x/ugJUAQ)
 - [ ] Журнал экспериментов: TODO
 
 ---
