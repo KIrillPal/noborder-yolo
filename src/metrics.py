@@ -60,7 +60,11 @@ def compute_precision_recall(
     recall = total_matched / gt_count
     return {
         "precision": precision,
-        "recall": recall
+        "recall": recall,
+        "conf_matrix": [
+            [total_matched, pred_count - total_matched],
+            [gt_count - total_matched, 0]
+        ]
     }
     
 
