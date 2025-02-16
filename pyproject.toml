@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 ultralytics = "8.3.48"
 ipykernel = "^6.29.5"
+shapely = "^2.0.7"
 
 
 [build-system]

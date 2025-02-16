@@ -1,5 +1,6 @@
 {
     "version": 0.0,
     "model": "/alpha/projects/wastie/experiments/experiments/02_11_noback_2classes_r70_lr0_x3_lrf_x3_bs_102/weights/best.pt",
-    "data": "/alpha/projects/wastie/datasets/26_12_2_classes/data.yml"
+    "data": "/alpha/projects/wastie/datasets/26_12_2_classes/data.yml",
+    "imgsz": 1000
 }
