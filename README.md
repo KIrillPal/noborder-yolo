@@ -7,7 +7,7 @@
 ---
 
 <div align="center" >
-<img src="https://progress-bar.xyz/11/?width=500&prefix=Диплом%20готов%20на%20" width=70% />
+<img src="https://progress-bar.xyz/16/?width=500&prefix=Диплом%20готов%20на%20" width=70% />
 </div>
 
 ## Навигация
