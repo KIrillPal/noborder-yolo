@@ -1,6 +1,24 @@
 {
-    "version": 0.0,
-    "model": "/alpha/projects/wastie/experiments/experiments/02_11_noback_2classes_r70_lr0_x3_lrf_x3_bs_102/weights/best.pt",
-    "data": "/alpha/projects/wastie/datasets/26_12_2_classes/data.yml",
-    "imgsz": 1000
+    "version": 0.2,
+    "models": {
+        "default": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102/weights/best.pt",
+        "no_background": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102_noback/weights/best.pt"
+    },
+    "data": "/alpha/projects/wastie/datasets/25_12_2_classes_fpfn_update_v2/data.yml",
+    "imgsz": 1000,
+    "interpolated": {
+        "datasets": [
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_18_00",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_14_17",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_14_47",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_15_18",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_15_48",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_16_18",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_16_48",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_16_30",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_17_00",
+            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_17_30"
+        ],
+        "test": "/alpha/projects/wastie/datasets/26_12_interpolated/data.yml"
+    }
 }
