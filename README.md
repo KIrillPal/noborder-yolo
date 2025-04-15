@@ -7,7 +7,7 @@
 ---
 
 <div align="center" >
-<img src="https://progress-bar.xyz/23/?width=500&prefix=Диплом%20готов%20на%20" width=70% />
+<img src="https://progress-bar.xyz/25/?width=500&prefix=Диплом%20готов%20на%20" width=70% />
 </div>
 
 ## Навигация
@@ -22,13 +22,14 @@
 
 | Работа | Прогресс | Ссылка |
 | --- | --- | --- |
-| Литобзор |  ![Progress](https://progress-bar.xyz/20/) | https://confluence.color.iitp.ru/x/vAJUAQ |
+| Литобзор |  ![Progress](https://progress-bar.xyz/50/) | https://confluence.color.iitp.ru/x/vAJUAQ |
 | Анализ проблемы | ![Progress](https://progress-bar.xyz/100/) | https://confluence.color.iitp.ru/x/ywJUAQ |
 | Анализ источников проблемы | ![Progress](https://progress-bar.xyz/90/) |  |
 | Эксперимент : Удаление краевых объектов из разметки | ![Progress](https://progress-bar.xyz/30/) | |
 | Эксперимент : Удаление краевых объектов из loss функции | ![Progress](https://progress-bar.xyz/0/) | |
 | Реализация интегральной метрики | ![Progress](https://progress-bar.xyz/90/) | |
 | Тестирование интегральной метрики | ![Progress](https://progress-bar.xyz/20/) | |
+| Агрегация ConvLSTM | ![Progress](https://progress-bar.xyz/0/) | |
 | Текст статьи | ![Progress](https://progress-bar.xyz/10/) | https://latex.se-vi-science.ru/read/rjkxjpsqkvxs#46dd79 |
 
 ---
