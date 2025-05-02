@@ -1,3 +1,6 @@
 [submodule "utils"]
 	path = utils
 	url = ssh://git@gitlab.iitp.ru:30222/eksli/wastie/wastie-cv/utils.git
+[submodule "wastie-yolov8"]
+	path = yolo
+	url = git@gitlab.eksli.ru:eksli/wastie/wastie-cv/wastie-yolov8.git
