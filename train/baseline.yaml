@@ -29,10 +29,10 @@ data:
   val: /alpha/projects/wastie/datasets/02_11_uniform_simple_50_2classes/val
 
   table: [
-      "/alpha/projects/wastie/projects/wastie/datasets/18_09_test_2classes/data.yml",
-      "/alpha/projects/wastie/projects/wastie/datasets/25_12_2_classes/data.yml",
-      "/alpha/projects/wastie/projects/wastie/code/startsev/datasets/08_04_winter_dataset_2_classes/data.yml",
-      "/alpha/projects/wastie/projects/wastie/code/startsev/datasets/09_04_sum_win_test_2_classes/data.yml",
+      "/alpha/projects/wastie/datasets/18_09_test_2classes/data.yml",
+      "/alpha/projects/wastie/datasets/25_12_2_classes/data.yml",
+      "/alpha/projects/wastie/datasets/08_04_winter_dataset_2_classes/data.yml",
+      "/alpha/projects/wastie/datasets/09_04_sum_win_test_2_classes/data.yml",
       "/alpha/projects/wastie/datasets/05_02_sparse_test/data.yml",
       "/alpha/projects/wastie/datasets/05_02_dense_test/data.yml",
   ]
