@@ -2,9 +2,12 @@
     "version": 0.2,
     "models": {
         "default": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102/weights/best.pt",
-        "no_background": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102_noback/weights/best.pt"
+        "no_background": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102_noback/weights/best.pt",
+        "noborder_aug": "/alpha/projects/wastie/experiments/YOLOv8-noborder-exp/noborder-aug2/weights/best.pt"
     },
     "data": "/alpha/projects/wastie/datasets/25_12_2_classes_fpfn_update_v2/data.yml",
+    "dense": "/alpha/projects/wastie/datasets/05_02_dense_test/data.yml",
+    "sparse": "/alpha/projects/wastie/datasets/05_02_sparse_test/data.yml",
     "imgsz": 1000,
     "interpolated": {
         "datasets": [
