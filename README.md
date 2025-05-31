@@ -7,7 +7,7 @@
 ---
 
 <div align="center" >
-<img src="https://progress-bar.xyz/55/?width=500&prefix=Диплом%20готов%20на%20" width=70% />
+<img src="https://progress-bar.xyz/65/?width=500&prefix=Диплом%20готов%20на%20" width=70% />
 </div>
 
 ## Навигация
@@ -31,6 +31,6 @@
 | Тестирование интегральной метрики | ![Progress](https://progress-bar.xyz/100/) | |
 | Необучаемая агрегация | ![Progress](https://progress-bar.xyz/90/) | |
 | Агрегация ConvLSTM | ![Progress](https://progress-bar.xyz/80/) | |
-| Текст статьи | ![Progress](https://progress-bar.xyz/10/) | https://latex.se-vi-science.ru/read/rjkxjpsqkvxs#46dd79 |
+| Текст статьи | ![Progress](https://progress-bar.xyz/30/) | https://latex.se-vi-science.ru/read/rjkxjpsqkvxs#46dd79 |
 
 ---
