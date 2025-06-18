@@ -13,7 +13,7 @@ class ThresholdClassifier(BaseClassifier):
         return groups, [
             max(
                 list(range(self.n_classes)), 
-                key=lambda x: len([1 for obj in group if obj['cls'] == x])
+                key=lambda x: len([1 for obj in group if obj['cls'] == str(x)])
             )
             for group in groups
         ]

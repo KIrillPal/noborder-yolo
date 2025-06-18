@@ -1,0 +1,72 @@
+############
+experiment: YOLOv8-noborder-exp
+mlflow_uri: https://mlflow.eksli.ru/mlflow
+store_exp_to: /alpha/projects/wastie/experiments
+device: 0
+resume: False
+maxby: f1
+
+debug: False
+############
+
+custom_tags: []
+
+model:
+  pretrained: /alpha/projects/wastie/experiments/YOLOv8-noborder-exp/noborder_loss_pretrain_fixed6/weights/best.pt
+  imgsz: 1000
+  tags:
+    - YOLOv8
+    - segmentation
+    - M
+    - noborder_loss
+
+data:
+  names:
+  - bot
+  - alum
+  nc: 2
+  test: /alpha/projects/wastie/datasets/18_09_test_2classes/test
+  train: /alpha/projects/wastie/datasets/02_11_uniform_simple_50_2classes/train
+  val: /alpha/projects/wastie/datasets/02_11_uniform_simple_50_2classes/val
+
+  table: []
+
+hyp: 
+  epochs: 140 
+  batch: 32
+  iou: 0.7 
+  optimizer: AdamW 
+  cos_lr: True 
+  workers: 16
+  seed: 3407 
+
+  lr0: 0.001
+  lrf: 0.2
+  momentum: 0.7699832015991664
+  weight_decay: 0.0007568977500575172
+  warmup_epochs: 3.7406242240097027
+  warmup_momentum: 0.7845327779959415
+  warmup_bias_lr: 0.011954941147402
+  box: 6.1645993820834475
+  cls: 4.3176066102386015
+  dfl: 1.3498378103690045
+  pose: 0.0
+  kobj: 1.104523999986013
+  label_smoothing: 0.0
+  nbs: 32
+  hsv_h: 0.1820607348780659
+  hsv_s: 0.3218661071104896
+  hsv_v: 0.06764270868544679
+  degrees: 180.0
+  translate: 0.24
+  scale: 0.23599733906867384
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.37482413225670336
+  fliplr: 0.29986738217828945
+  bgr: 0.0
+  mosaic: 0.722348409612362
+  mixup: 0.1395683433833139
+  copy_paste: 0.24497844646928055 
+  erasing: 0.1481961564585869 
+  crop_fraction: 0.38829348083201193

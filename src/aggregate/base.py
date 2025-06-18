@@ -24,7 +24,8 @@ class Aggregator:
         
     def aggregate(self, groups : list[list[dict]]) -> list[dict]:
         groups, classes = self.classifier_.classify(groups)
-        return self.merger_.merge(groups, classes)
+        merged = self.merger_.merge(groups, classes)
+        return [m for m in merged if len(m['points']) > 0]
 
 
 class ComposeClassifier(BaseClassifier):

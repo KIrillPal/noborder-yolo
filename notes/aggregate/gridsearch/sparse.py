@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 # In[2]:
 
 
@@ -54,15 +53,15 @@ gt_aggregator = Aggregator(classifier, merger)
 
 # ### Интерполированный тест
 
-# In[7]:
+# In[ ]:
 
 
 import pickle
 import json
 TEST_NAME = 'sparse'
-with open(f'../../../groups/gt_test_{TEST_NAME}.pkl', 'rb') as f:
+with open(f'/alpha/projects/wastie/code/kondrashov/delta/notes/gt_test_24_12_sparse_c03.pkl', 'rb') as f:
     gt_extended_groups = pickle.load(f)
-with open(f'../../../groups/pred_test_{TEST_NAME}.pkl', 'rb') as f:
+with open(f'/alpha/projects/wastie/code/kondrashov/delta/notes/pred_test_24_12_sparse_c03.pkl', 'rb') as f:
     pred_extended_groups = pickle.load(f)
 with open(f'../../../data/{TEST_NAME}_test/speed.json') as f:
     speed_dict = json.load(f)
@@ -178,21 +177,21 @@ def find_matches(gt : list[dict], pred : list[dict], iou_threshold : float = 0.7
 
 
 def find_best_aggregator(gt):
-    thresholds = list(range(1, 10))
-    confidences = np.linspace(0.35, 0.9, 12)
+    thresholds = list(range(1, 15))
+    confidences = np.linspace(0.3, 0.9, 13)
     remove_border_options = [False, True]
     precisions = np.zeros((len(remove_border_options), len(thresholds), len(confidences)))
     recalls    = np.zeros((len(remove_border_options), len(thresholds), len(confidences)))
     f1_scores  = np.zeros((len(remove_border_options), len(thresholds), len(confidences)))
 
     for i, remove_borders in enumerate(remove_border_options):
-        for j, integration_threshold in enumerate(thresholds):
-            for k, confidence_threshold in enumerate(confidences):
+        for k, confidence_threshold in enumerate(confidences):
+            for j, integration_threshold in enumerate(thresholds):
                 compose_list = []
+                compose_list.append(ConfidenceClassifier(N_CLASSES, confidence_threshold))
                 if remove_borders:
                     compose_list.append(NoBorderClassifier(N_CLASSES, IMAGE_SHAPE))
                 compose_list.append(ThresholdClassifier(N_CLASSES, integration_threshold))
-                compose_list.append(ConfidenceClassifier(N_CLASSES, confidence_threshold))
                 classifier = ComposeClassifier(compose_list)
                 merger = UnionMerger(N_CLASSES)
                 aggregator = Aggregator(classifier, merger)
@@ -229,78 +228,3 @@ with open(f"{TEST_NAME}_recalls.pkl", 'wb') as f:
     pickle.dump(recalls, f)
 with open(f"{TEST_NAME}_f1_scores.pkl", 'wb') as f:
     pickle.dump(f1_scores, f)
-
-
-# ### Визуализация группы
-
-# In[ ]:
-
-
-iidx = 0
-gidx = 20
-
-
-# In[ ]:
-
-
-get_ipython().run_line_magic('matplotlib', 'inline')
-import cv2
-from matplotlib import pyplot as plt
-from utils.interpolate.markup_utils import vis_markup
-
-for instance in pred_extended_groups[gidx][iidx:iidx+1]:
-    print(instance['is_matched'], instance['is_border'], instance['img'])
-    name = Path(instance['img']).name
-    s = shifts[name] % 1000
-    img = cv2.imread(Path('/alpha/projects/wastie/code/kondrashov/delta/data/dense_test/imgs') / name)
-    img = vis_markup(img, [instance['obj']])
-    
-    fig, axs = plt.subplots(1, 2, figsize=(15, 7))
-    axs[0].set_title('Ground truth')
-    axs[0].axis('off')
-    axs[0].imshow(img)
-    axs[0].axhline(y=img.shape[0]-s, color='r', linestyle='-')
-    img_gt = cv2.imread(Path('/alpha/projects/wastie/code/kondrashov/delta/data/dense_test/imgs') / name)
-    img_gt = vis_markup(img_gt, [shift_mask(obj, -s) for obj in pred_groups[gidx]])
-    axs[1].set_title('Predicted')
-    axs[1].axis('off')
-    axs[1].imshow(img_gt)
-    axs[1].axhline(y=img_gt.shape[0]-s, color='r', linestyle='-')
-    
-    
-iidx += 1
-print(shifts[name])
-
-plt.show()
-
-
-# In[ ]:
-
-
-iidx = 0
-gidx += 1
-
-
-# In[ ]:
-
-
-gt_groups[gidx][0]
-
-
-# In[ ]:
-
-
-shifts
-
-
-# In[ ]:
-
-
-shifts['tula_sep_0002_2024_07_16_14_17_15_600.jpg']
-
-
-# In[ ]:
-
-
-
-

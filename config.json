@@ -3,25 +3,47 @@
     "models": {
         "default": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102/weights/best.pt",
         "no_background": "/alpha/projects/wastie/experiments/YOLOv8-2cls-18_09/r70_lr0_x3_lrf_x3_bs_102_noback/weights/best.pt",
-        "noborder_aug": "/alpha/projects/wastie/experiments/YOLOv8-noborder-exp/noborder-aug2/weights/best.pt"
+        "noborder_aug": "/alpha/projects/wastie/experiments/YOLOv8-noborder-exp/noborder-aug2/weights/best.pt",
+        "noborder_loss": "/alpha/projects/wastie/experiments/YOLOv8-noborder-exp/noborder_loss/weights/best.pt",
+        "noborder_loss_finetune": "/alpha/projects/wastie/experiments/YOLOv8-noborder-exp/noborder_loss_finetune_fixed/weights/best.pt"
     },
     "data": "/alpha/projects/wastie/datasets/25_12_2_classes_fpfn_update_v2/data.yml",
     "dense": "/alpha/projects/wastie/datasets/05_02_dense_test/data.yml",
     "sparse": "/alpha/projects/wastie/datasets/05_02_sparse_test/data.yml",
     "imgsz": 1000,
     "interpolated": {
-        "datasets": [
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_18_00",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_14_17",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_14_47",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_15_18",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_15_48",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_16_18",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_16_48",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_16_30",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_17_00",
-            "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_17_30"
-        ],
+        "datasets": {
+            "train": [
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_06_21_11_00",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_06_21_12_00",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_06_21_13_00",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_07_16_14_13",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_07_16_14_43",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_07_16_15_14",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_07_16_15_44",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_07_16_16_14",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_08_11_36",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_08_12_06",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_08_12_37",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_12_10_51",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_12_11_21",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_12_12_21",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_20_10_10",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0001_2024_08_20_10_40"
+            ],
+            "test": [
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_18_00",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_14_17",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_14_47",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_15_18",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_15_48",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_16_18",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_16_16_48",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_16_30",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_17_00",
+                "/alpha/projects/wastie/eternal-storage/dataset/tula_sep_0002_2024_07_22_17_30"
+            ]
+        },
         "test": "/alpha/projects/wastie/datasets/26_12_interpolated/data.yml"
     }
 }

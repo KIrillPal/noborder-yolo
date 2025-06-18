@@ -1,0 +1,59 @@
+experiment: ConvLSTM-2cls-test
+mlflow_uri: https://mlflow.eksli.ru/mlflow
+store_exp_to: /alpha/projects/wastie/experiments
+
+device: 1
+resume: False
+debug: False
+
+model:
+  input_channels: 3
+  hidden_dims: [64, 128, 64]
+  kernel_sizes: [[3, 3], [3, 3], [3, 3]]
+  num_layers: 3
+  num_classes: 3
+  pretrained: null
+
+data:
+  nc: 2
+  names: [bot, alum]
+  seq_length: 20
+  img_size: 64
+  test: /alpha/projects/wastie/code/kondrashov/delta/data/sparse_test/pred_groups
+  train: /alpha/projects/wastie/code/kondrashov/delta/data/train_groups
+  val: /alpha/projects/wastie/code/kondrashov/delta/data/val_groups
+
+hyp:
+  epochs: 50
+  batch_size: 32
+  optimizer: AdamW
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  scheduler: CosineAnnealingLR
+  t_max: 10
+  seed: 3407
+
+augmentation:
+  color_jitter:
+    enabled: True
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.1
+    p: 0.5
+
+  vflip:
+    enabled: True
+    p: 0.5
+
+  hflip:
+    enabled: True
+    p: 0.5
+
+class_balancing:
+  use_focal_loss: True
+  focal_alpha: 
+    - 0.74
+    - 0.40
+    - 0.87
+  focal_gamma: 2.0
